@@ -1,0 +1,69 @@
+WARNING: Could not detect a GPU. Neural Network generation will be slow.
+
+[01;1mBrainome Table Compiler v1.004-165-prod[0m
+Copyright (c) 2019-2021 Brainome, Inc. All Rights Reserved.
+Licensed to:                 y Demo User  (Evaluation)
+Expiration Date:             2021-12-12   169 days left
+Maximum File Size:           100 MB
+Maximum Instances:           20000
+Maximum Attributes:          100
+Maximum Classes:             unlimited
+Connected to:                daimensions.brainome.ai  (local execution)
+
+[01;1mCommand:[0m
+    btc -target RainTomorrow -measureonly smaller_rain.csv
+
+Start Time:                 06/26/2021, 20:45 PDT
+
+Cleaning...Splitting into training and validation...Pre-training measurements...
+
+[01;1mPre-training Measurements[0m
+Data:
+    Input:                      smaller_rain.csv
+    Target Column:              RainTomorrow
+    Number of instances:      20000
+    Number of attributes:        23 out of 23
+    Number of classes:            3
+
+Class Balance:                
+                              No: 75.78%
+                             Yes: 21.98%
+                              NO: 2.24%
+
+Learnability:
+    Best guess accuracy:          75.78%
+    Data Sufficiency:             Maybe enough data to generalize. [yellow]
+
+Capacity Progression:             at [ 5%, 10%, 20%, 40%, 80%, 100% ]
+    Ideal Machine Learner:             10,  11,  12,  12,  13,  13
+
+
+
+
+Expected Generalization:
+    Decision Tree:                 2.44 bits/bit
+    Neural Network:               51.20 bits/bit
+    Random Forest:                11.95 bits/bit
+
+Expected Accuracy:              Training            Validation
+    Decision Tree:               100.00%                62.89%
+    Neural Network:                 ----                  ----
+    Random Forest:               100.00%                83.26%
+
+Recommendations:
+    Warning: Data has high information density. Using effort 5 and larger ( -e 5 ) can improve results.
+    We recommend using Random Forest -f RF.
+    If predictor accuracy is insufficient, try using the option -rank to automatically select the important attributes.
+    If TPR of your minority class is important, try using the option -O to optimize its TPR. I.e.  -O myclass
+    If TPR of all classes are important and your data is unbalanced, try using the option -balance to improve all TPRs.
+    If predictor accuracy is insufficient, try using the effort option -e with a value of 5 or more to increase training time. 
+
+Time to Build Estimates:
+    Decision Tree:                less than a minute
+
+
+
+
+End Time:           06/26/2021, 20:45 PDT
+Runtime Duration:   22s
+
